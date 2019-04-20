@@ -4,9 +4,7 @@ import (
 	"fmt"
 	"github.com/spf13/cobra"
 	"os"
-	"os/exec"
-	"sync"
-	"time"
+	"shin1x1/rerun/handlers"
 )
 
 var (
@@ -24,27 +22,7 @@ var rootCmd = &cobra.Command{
 			commandArgs = args[1:]
 		}
 
-		var wg sync.WaitGroup
-
-		for {
-			wg.Add(1)
-			go func(command string, args []string) {
-				defer wg.Done()
-				fmt.Println(command, args)
-
-				cmd := exec.Command(command, args...)
-				cmd.Stdout = os.Stdout
-				cmd.Stderr = os.Stderr
-
-				if err := cmd.Run(); err != nil {
-					fmt.Println(err)
-				}
-				time.Sleep(time.Duration(sleep) * time.Second)
-
-			}(command, commandArgs)
-
-			wg.Wait()
-		}
+		handlers.NewRerun(command, commandArgs, sleep).Run()
 	},
 }
 
