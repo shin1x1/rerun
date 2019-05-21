@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/shin1x1/rerun/handlers"
 	"github.com/spf13/cobra"
 	"os"
-	"shin1x1/rerun/handlers"
 )
 
 var (
