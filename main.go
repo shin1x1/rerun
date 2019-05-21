@@ -1,7 +1,7 @@
 package main
 
 import (
-	"shin1x1/rerun/cmd"
+	"github.com/shin1x1/rerun/cmd"
 )
 
 func main() {

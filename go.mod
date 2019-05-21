@@ -1,4 +1,4 @@
-module shin1x1/rerun
+module github.com/shin1x1/rerun
 
 go 1.12
 
