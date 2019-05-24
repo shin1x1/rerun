@@ -11,7 +11,7 @@ var versionCmd = &cobra.Command{
 	Short: "Show version",
 	Long:  "Show version",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(version.Version)
+		fmt.Println("rerun version " + version.Version)
 	},
 }
 
