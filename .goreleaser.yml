@@ -7,7 +7,7 @@ builds:
     env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X github.com/shin1x1/rerun/version.Version={{.Version}}
+      - -s -w -X github.com/shin1x1/rerun/version.version={{.Version}} -X github.com/shin1x1/rerun/version.commit={{.Commit}}
     goos:
       - darwin
       - linux
