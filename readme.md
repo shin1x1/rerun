@@ -4,9 +4,7 @@
 
 `rerun` is a tool written in Go that automatically restarts the exited command and keeps running. It's like a simplified supervisor on a development PC.
 
-```
 ![screencast](docs/screencast.svg)
-```
 
 ## Installation
 
