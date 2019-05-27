@@ -33,5 +33,5 @@ $ rerun -s 1 ./sample.sh
 If the command contains `-`, add `--` before the command.
 
 ```bash
-$ rerun kubectl get events -w
+$ rerun -- kubectl get events -w
 ```
